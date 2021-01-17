@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Alpha"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Alpha">
+				<Option output="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Alpha.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/libc/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/libc/include/sys"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/sys"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Alpha"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Alpha/fast">
+				<Option output="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Alpha.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/libc/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/libc/include/sys"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel"/>
+					<Add directory="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/sys"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Alpha/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/gdt_c.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/heap.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/idt_c.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/isr_c.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/keyboard.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/pic.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/ps2.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/timer.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/tty.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/arch/i386/vga.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/data_structures/cQueue.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/cQueue.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/gdt.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/heap.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/idt.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/io.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/isr.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/kernel_io.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/keyboard.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/pic.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/ps2.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/timer.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/include/kernel/tty.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/kernel/kernel/kernel.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/include/stdio.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/include/stdlib.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/include/string.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/include/sys/cdefs.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/stdio/printf.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/stdio/putchar.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/stdio/puts.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/stdlib/abort.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/string/memcmp.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/string/memcpy.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/string/memmove.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/string/memset.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/libc/string/strlen.c">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/cQueue.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/gdt.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/idt.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/io.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/isr.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/keyboard.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/pic.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/ps2.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/timer.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel/tty.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/stdio.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/stdlib.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/string.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/sysroot/usr/include/sys/cdefs.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/marco/Alpha/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,4 @@
+C:\Users\marco\AppData\Local\JetBrains\CLion2020.3\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -D CMAKE_D_COMPILER=[\\wsl$\Ubuntu\home\marco\opt\cross\bin\i686-elf-gcc] -G "CodeBlocks - Unix Makefiles" //wsl$/Ubuntu/home/marco/Alpha
+-- Configuring done
+-- Generating done
+-- Build files have been written to: //wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug

@@ -1,0 +1,3 @@
+//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/CMakeFiles/Alpha.dir
+//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/CMakeFiles/edit_cache.dir

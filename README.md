@@ -10,6 +10,7 @@ At the time I write this readme file, the following goals have been achieved:
   <li>Keyboard driver works correctly.</li>
   <li>VGA text-mode driver works as expected.</li>
 </ol>
+
 I succeded along the way thank to the OSDEV.org wiki and community, without which I couldn't have even achieved the most simple steps.
 If you want to give it a try, I suggest you to use VirtualBox.
 If you have ideas about this project and would like to shame them with me, you'll be welcome! :)

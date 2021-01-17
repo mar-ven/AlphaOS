@@ -1,4 +1,4 @@
-# Install script for directory: //wsl$/Ubuntu/home/marco/Alpha
+# Install script for directory: /cygdrive/c/Users/marco/Documents/GitHub/AlphaOS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "//wsl$/Ubuntu/home/marco/Alpha/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

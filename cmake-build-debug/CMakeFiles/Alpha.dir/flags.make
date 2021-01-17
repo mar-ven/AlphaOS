@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I"//wsl\$$/Ubuntu/home/marco/Alpha/kernel/arch/i386" -I"//wsl\$$/Ubuntu/home/marco/Alpha/kernel/include" -I"//wsl\$$/Ubuntu/home/marco/Alpha/kernel/include/kernel" -I"//wsl\$$/Ubuntu/home/marco/Alpha/libc/include" -I"//wsl\$$/Ubuntu/home/marco/Alpha/libc/include/sys" -I"//wsl\$$/Ubuntu/home/marco/Alpha/sysroot" -I"//wsl\$$/Ubuntu/home/marco/Alpha/sysroot/usr" -I"//wsl\$$/Ubuntu/home/marco/Alpha/sysroot/usr/include" -I"//wsl\$$/Ubuntu/home/marco/Alpha/sysroot/usr/include/kernel" -I"//wsl\$$/Ubuntu/home/marco/Alpha/sysroot/usr/include/sys" 
+C_INCLUDES = -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/kernel/arch/i386 -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/kernel/include -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/kernel/include/kernel -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/libc/include -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/libc/include/sys -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/sysroot -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/sysroot/usr -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/sysroot/usr/include -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/sysroot/usr/include/kernel -I/cygdrive/c/Users/marco/Documents/GitHub/AlphaOS/sysroot/usr/include/sys 
 

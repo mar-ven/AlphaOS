@@ -7,7 +7,7 @@ At the time I write this readme file, the following goals have been achieved:
   <li>Global descriptor table is initialised.</li>
   <li>Interrupt descriptor table is initialised.</li>
   <li>PIC driver works correctly.</li>
-  <li>Keyboard driver works correctly.</li>
+  <li>Keyboard driver works almost correctly.</li>
   <li>VGA text-mode driver works as expected.</li>
 </ol>
 

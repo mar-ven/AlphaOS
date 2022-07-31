@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <kernel/debug.h>
 
 #define PS2_DATA_PORT 0x60
 #define PS2_STATUS_REGISTER 0x64

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 #include <kernel/tty.h>
 #include <kernel/gdt.h>
 #include <kernel/idt.h>
@@ -11,14 +10,15 @@
 #include <kernel/grub.h>
 
 void kernel_main(multiboot_info_t* mbd, unsigned int magic) {
+	
 	terminal_initialize();
+	check_multiboot(mbd, magic);
 	init_gdt();
 	init_idt();
-	printf("Test12\n");
-	//PIC_remap(0x20, 0x28);
-	//printf("Esito init ps2: %u\n", init_PS2() );
-	check_multiboot(mbd, magic);
-
+	printf("Welcome to AlphaOS\n");
+	PIC_remap(0x20, 0x28);
+	init_PS2();
+	printf("Esito init ps2: %u\n", init_PS2() );
 	detect_PS2_devices();
 	init_keyboard();
 	init_heap(0x100000);

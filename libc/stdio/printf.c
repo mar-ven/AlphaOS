@@ -68,7 +68,10 @@ int printf(const char* restrict format, ...) {
 			unsigned char c[11];
 			size_t i = 0;
 			do {
-				c[i] = '0' + num % 10;
+				if(num < 0)
+					num = -num;
+				int append = num % 10;
+				c[i] = '0' + append;
 				i++;
 			} while((num /= 10) != 0);
 			for(size_t d = 0; d < i; d++) {
@@ -93,3 +96,4 @@ int printf(const char* restrict format, ...) {
 	va_end(parameters);
 	return written;
 }
+

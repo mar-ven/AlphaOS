@@ -52,14 +52,18 @@ bool init_PS2() {
     io_wait();
     outb(PS2_COMMAND_REGISTER, 0xA7);
     io_wait();
-    printf("Finished 1\n");
+    #ifdef PS2_DEBUG
+        printf("Finished 1\n");
+    #endif
     //FLUSH THE OUTPUT BUFFER
     int i = 0;
     uint8_t status_register;
     
     uint8_t fake_read = inb(PS2_DATA_PORT);
     
-    printf("Finished 2\n");
+    #ifdef PS2_DEBUG
+        printf("Finished 2\n");
+    #endif
     //SET THE CONTROLLER CONFIGURATION BYTE
     outb(PS2_COMMAND_REGISTER, 0x20);
     i = 0;
@@ -75,11 +79,14 @@ bool init_PS2() {
     if(i == 60)
         return false;
     uint8_t conf_byte = inb(PS2_DATA_PORT);
-    if((conf_byte & 0x32) == 32)
-        printf("DUAL CHANNEL\n");
-    else {
-        printf("NOT DUAL CHANNEL\n");
-    }
+    #ifdef PS2_DEBUG
+        if((conf_byte & 0x32) == 32)
+            printf("DUAL CHANNEL\n");
+            
+        else {
+            printf("NOT DUAL CHANNEL\n");
+        }
+    #endif
     conf_byte &= 188;
     outb(PS2_COMMAND_REGISTER, 0x60);
     i = 0;
@@ -97,7 +104,9 @@ bool init_PS2() {
     outb(PS2_DATA_PORT, conf_byte);
     io_wait();
     
-    printf("Finished 3\n");
+    #ifdef PS2_DEBUG
+        printf("Finished 3\n");
+    #endif
     //PERFORM CONTROLLER SELF-TEST
     outb(PS2_COMMAND_REGISTER, 0xAA);
     i = 0;
@@ -113,8 +122,10 @@ bool init_PS2() {
     if(i == 60)
         return false;
     uint8_t answer = inb(PS2_DATA_PORT);
-    printf("%s\n", (answer == 0x55) ? "Everything good." : "Oh no!\n");
-    printf("Finished 4\n");
+    #ifdef PS2_DEBUG
+        printf("%s\n", (answer == 0x55) ? "Everything good." : "Oh no!\n");
+        printf("Finished 4\n");
+    #endif
     //PERFORM INTERFACE TESTS
     outb(PS2_COMMAND_REGISTER, 0xAB);
     i = 0;
@@ -130,7 +141,9 @@ bool init_PS2() {
     if(i == 60)
         return false;
     answer = inb(PS2_DATA_PORT);
-    printf("Result of interface test is: %u\n", answer);
+    #ifdef PS2_DEBUG
+        printf("Result of interface test is: %u\n", answer);
+    #endif
     //ENABLE DEVICES
     outb(PS2_COMMAND_REGISTER, 0xAE);
     io_wait();
@@ -166,9 +179,11 @@ bool init_PS2() {
         return false;
     outb(PS2_DATA_PORT, conf_byte);
     io_wait();
-    printf("Finished 6\n");
+    #ifdef PS2_DEBUG
+        printf("Finished 6\n");
     //RESET DEVICE
-    printf("FINISHED 7: status: %u\n", sendByteToPS2(0xFF));
+        printf("FINISHED 7: status: %u\n", sendByteToPS2(0xFF));
+    #endif
     i = 0;
     do {
         io_wait();
@@ -182,7 +197,9 @@ bool init_PS2() {
     if(i == 60)
         return false;
     answer = inb(PS2_DATA_PORT);
-    printf("%s\n", (answer == 0xFA) ? "Reset successful.\n" : "Reset NOT successful.\n");
+    #ifdef PS2_DEBUG
+        printf("%s\n", (answer == 0xFA) ? "Reset successful.\n" : "Reset NOT successful.\n");
+    #endif
     /*i = 0;
     do {
         io_wait();
@@ -212,11 +229,17 @@ bool init_PS2() {
     answer = inb(PS2_DATA_PORT);
      printf("%s\n", (answer == 0x0) ? "Mouse ID detected.\n" : "Mouse ID not detected.\n");
     */
-   printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+    #ifdef PS2_DEBUG
+        printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+    #endif
    io_wait();
-   printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+   #ifdef PS2_DEBUG
+        printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+    #endif
    io_wait();
-   printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+   #ifdef PS2_DEBUG
+        printf("%u %u\n", inb(PS2_DATA_PORT), inb(PS2_DATA_PORT));
+    #endif
    
    return true;
 }
@@ -238,7 +261,9 @@ void detect_PS2_devices() {
                 break;
         } while (i < 60);
         answer = inb(PS2_DATA_PORT);
-        printf("DETECT: 1: %u\n", answer);
+        #ifdef PS2_DEBUG
+            printf("DETECT: 1: %u\n", answer);
+        #endif
     } while(answer != 0xFA);
 
     //IDENTIFY
@@ -255,7 +280,9 @@ void detect_PS2_devices() {
                 break;
         } while (i < 60);
         answer = inb(PS2_DATA_PORT);
-        printf("DETECT: 2: %u\n", answer);
+        #ifdef PS2_DEBUG
+            printf("DETECT: 2: %u\n", answer);
+        #endif
     } while(answer != 0xFA);
     
     //UP TO 2 BYTES OF REPLY
@@ -270,7 +297,9 @@ void detect_PS2_devices() {
             break;
     } while (i < 60);
     answer = inb(PS2_DATA_PORT);
-    printf("FIRST BYTE: %u\n", answer);
+    #ifdef PS2_DEBUG
+        printf("FIRST BYTE: %u\n", answer);
+    #endif
     i = 0;
     do {
         io_wait();
@@ -282,7 +311,9 @@ void detect_PS2_devices() {
             break;
     } while (i < 60);
     answer = inb(PS2_DATA_PORT);
-    printf("SECOND BYTE: %u\n", answer);
+    #ifdef PS2_DEBUG
+        printf("SECOND BYTE: %u\n", answer);
+    #endif
 
     //ENABLE DEVICES
     uint8_t conf_byte;

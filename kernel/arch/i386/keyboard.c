@@ -429,10 +429,12 @@ static void keyboard_callback(registers_t regs)
     keyboard_answer = receiveByteFromPS2ByInterrupt();
     if(keyboard_answer == 0xE0 || keyboard_answer == 0xF0)
         isReleased = true;
-    if(!isReleased)
-        printf("%c", keyboard_set2_decode(keyboard_answer));
-    else if(keyboard_answer != 0xE0 && keyboard_answer != 0xF0)
-        isReleased = false;
+    #ifdef KEYBOARD_DEBUG
+        if(!isReleased)
+            printf("%c", keyboard_set2_decode(keyboard_answer));
+        else if(keyboard_answer != 0xE0 && keyboard_answer != 0xF0)
+            isReleased = false;
+    #endif
     /*char c = keyboard_set2_decode(keyboard_answer);
     if(c != 0 && c != keyboard_answer)
         printf("%u", c);*/
@@ -444,7 +446,9 @@ static void keyboard12_callback(registers_t regs)
     
     uint8_t keyboard_answer;
     keyboard_answer = receiveByteFromPS2ByInterrupt();
-    printf("LINE 12: DATA RECEIVED: %u\n", keyboard_answer);
+    #ifdef KEYBOARD_DEBUG
+        printf("LINE 12: DATA RECEIVED: %u\n", keyboard_answer);
+    #endif
 }
 
 void init_keyboard() {
@@ -453,22 +457,34 @@ void init_keyboard() {
 
     bool check;
     check = sendByteToPS2(0xEE);
-    if(!check)
-        printf("No communication with keyboard.\n");
+    #ifdef KEYBOARD_DEBUG
+        if(!check)
+            printf("No communication with keyboard.\n");
+    #endif
     uint8_t response = receiveByteFromPS2ByPolling(&check);
-    printf("Response is: %u\n", response);
+    #ifdef KEYBOARD_DEBUG
+        printf("Response is: %u\n", response);
+    #endif
     
     check = sendByteToPS2(0xF0);
-    if(!check)
-        printf("No communication with keyboard.\n");
+    #ifdef KEYBOARD_DEBUG
+        if(!check)
+            printf("No communication with keyboard.\n");
+    #endif
     response = receiveByteFromPS2ByPolling(&check);
-    printf("Response is: %u\n", response);
+    #ifdef KEYBOARD_DEBUG
+        printf("Response is: %u\n", response);
+    #endif
     check = sendByteToPS2(0x0);
-    if(!check)
-        printf("No communication with keyboard.\n");
+    #ifdef KEYBOARD_DEBUG
+        if(!check)
+            printf("No communication with keyboard.\n");
+    #endif
     response = receiveByteFromPS2ByPolling(&check);
-    printf("Response is: %u\n", response);
-   
+    #ifdef KEYBOARD_DEBUG
+        printf("Response is: %u\n", response);
+    #endif
+
     register_interrupt_handler(IRQ1, &keyboard_callback);
     register_interrupt_handler(IRQ12, &keyboard12_callback);
 

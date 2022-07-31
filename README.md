@@ -5,6 +5,7 @@ Support for C standard library requires some time.
 At the time I write this readme file, the following goals have been achieved:
 <ol>
   <li>Global descriptor table is initialised.</li>
+  <li>Support to GRUB functions.</li>
   <li>Interrupt descriptor table is initialised.</li>
   <li>PIC driver works correctly.</li>
   <li>Keyboard driver works almost correctly.</li>
